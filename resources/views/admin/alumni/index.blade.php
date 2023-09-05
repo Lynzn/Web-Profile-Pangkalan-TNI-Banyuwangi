@@ -1,8 +1,8 @@
 @extends('layout_admin.template')
-@section('heading', 'Alumni AMIK Medicom')
+@section('heading', 'Dokumentasi Kegiatan LANAL')
 
 @section('page')
-    <li class="breadcrumb-item active">Alumni</li>
+    <li class="breadcrumb-item active">Dokumentasi Kegiatan</li>
 @endsection
 @section('content')
     <!-- Main content -->
@@ -15,7 +15,7 @@
                             <h3 class="card-title">
                                 <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
                                     data-target=".bd-example-modal-lg">
-                                    <i class="nav-icon fas fa-folder-plus"></i> &nbsp; Tambah Data Alumni
+                                    <i class="nav-icon fas fa-folder-plus"></i> &nbsp; Tambah Dokumentasi Kegiatan
                                 </button>
                             </h3>
                         </div>
@@ -26,8 +26,8 @@
                                     <tr>
                                         <th>No.</th>
                                         <th>Gambar</th>
-                                        <th width="20%">Nama Alumni</th>
-                                        <th width="40%">Tempat Kerja</th>
+                                        <th width="20%">Nama Kegiatan</th>
+                                        <th width="40%">Deskripsi Kegiatan</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -74,7 +74,7 @@
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Tambah Data Alumni</h4>
+                    <h4 class="modal-title">Tambah Dokumentasi Kegiatan</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -85,7 +85,7 @@
                         <div class="card-body">
 
                             <div class="form-group">
-                                <label for="gambar">Gambar Alumni</label>
+                                <label for="gambar">Dokumentasi Kegiatan</label>
                                 <div class="input-group">
                                     <div class="custom-file">
                                         <input type="file" class="custom-file-input  @error('gambar') is-invalid @enderror"
@@ -101,7 +101,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="nama_alumni">Nama Alumni </label>
+                                <label for="nama_alumni">Nama Kegiatan</label>
                                 <input type="text" name="nama_alumni" value="{{ old('nama_alumni') }}"
                                     class="form-control @error('nama_alumni') is-invalid @enderror"
                                     placeholder="Ramson Rajagukguk, A.Md">
@@ -113,7 +113,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="tempat_bekerja">Tempat Kerja </label>
+                                <label for="tempat_bekerja">Deskripsi Kegiatan </label>
                                 <input type="text" name="tempat_bekerja" value="{{ old('tempat_bekerja') }}"
                                     class="form-control @error('tempat_bekerja') is-invalid @enderror"
                                     placeholder="Komisari BUMN">
@@ -122,12 +122,6 @@
                                         Tempat kerja tidak boleh kosong.
                                     @enderror
                                 </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="link">Link Video </label>
-                                <input type="text" name="link" value="{{ old('link') }}" class="form-control"
-                                    placeholder="https://id.wikipedia.org">
                             </div>
                         </div>
                         <!-- /.card-body -->

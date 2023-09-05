@@ -38,7 +38,16 @@
               <div class="row align-items-center">
                   <div class="col-sm-4">
                       <div class="text-sm-start">
-                          <p class="mb-0">© 2023 Pangkalan Utama TNI AL V - Pangkalan TNI AL Banyuwangi</p>
+                          <p class="mb-0">©  
+                            <script>
+                                if ((new Date().getFullYear())== 2023){
+                                    document.write(new Date().getFullYear())
+                                }
+                                else {
+                                    document.write('2023 - ')
+                                    document.write(new Date().getFullYear())
+                                }
+                            </script> Pangkalan Utama TNI AL V - Pangkalan TNI AL Banyuwangi</p>
                       </div>
                   </div>
               </div>

@@ -25,7 +25,7 @@
                                     <tr>
                                         <th>No.</th>
                                         <th>Gambar</th>
-                                        <th width="60%">Judul_Berita</th>
+                                        <th width="60%">Judul Berita</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>

@@ -50,8 +50,8 @@ class ProfileController extends Controller
      */
     public function show(Request $request)
     {
-        // $user = $request->user();
-        // return view('admin.user.profile', compact('user'));
+         $user = $request->user();
+         return view('admin.user.profile', compact('user'));
     }
 
     /**
@@ -65,14 +65,14 @@ class ProfileController extends Controller
         $roles = Role::all()->pluck('name', 'id');
         $users = User::all();
 
-        return view('admin.user.profile',compact('users','roles'));
+        return view ('admin.user.profile',compact('users','roles'));
     }
 
     function ubahfoto(Request $request){
         $path = 'public/images/users/';
         $file = $request->file('gambar-profile');
         $new_image_name = 'UIMG'.date('Ymd').uniqid().'.jpg';
-        // $upload = $file->move(public_path($path), $new_image_name);
+        $upload = $file->move(public_path($path), $new_image_name);
         $upload =  $file->storeAs('public/images/users', $new_image_name);
 
         if(!$upload){
@@ -103,6 +103,7 @@ class ProfileController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
+            'email' => 'required|email|unique:users,email,' . Auth::user()->id,
         ]);
 
         $gambar = $request->file('foto_profile');

@@ -1,8 +1,8 @@
 @extends('layout_admin.template')
-@section('heading', 'Staff AMIK Medicom')
+@section('heading', 'Informasi Pendaftaran')
 
 @section('page')
-    <li class="breadcrumb-item active">Staff AMIK Medicom</li>
+    <li class="breadcrumb-item active">Informasi Pendaftaran</li>
 @endsection
 @section('content')
     <!-- Main content -->
@@ -15,7 +15,7 @@
                             <h3 class="card-title">
                                 <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
                                     data-target=".bd-example-modal-lg">
-                                    <i class="nav-icon fas fa-folder-plus"></i> &nbsp; Tambah Data Staff
+                                    <i class="nav-icon fas fa-folder-plus"></i> &nbsp; Tambah Informasi Pendaftaran
                                 </button>
                             </h3>
                         </div>
@@ -26,8 +26,8 @@
                                     <tr>
                                         <th width="5%">No.</th>
                                         <th>Gambar</th>
-                                        <th width="20%">Nama Staff</th>
-                                        <th width="40%">Jabatan</th>
+                                        <th width="20%">Jadwal Pendaftaran</th>
+                                        <th width="40%">Persyaratan dan Cara Pendaftaran</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -74,7 +74,7 @@
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Tambah Data Staff</h4>
+                    <h4 class="modal-title">Tambah Informasi Pendaftaran</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -100,7 +100,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="nama">Nama Staff</label>
+                                <label for="nama">Jadwal Pendaftaran</label>
                                 <input type="text" name="nama" value="{{ old('nama') }}"
                                     class="form-control @error('nama') is-invalid @enderror"
                                     placeholder="Ramson Rajagukguk, A.Md">
@@ -112,25 +112,16 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="link">Jabatan</label>
-                                <select name="jabatan" class="form-control @error('jabatan') is-invalid @enderror">
-                                    <option value="">-- Pilih Jabatan --</option>
-                                    <option value="direktur" @if (old('jabatan') == 'direktur') {{ 'selected' }} @endif>
-                                        Direktur</option>
-                                    <option value="pudir1">Pudir-1</option>
-                                    <option value="pudir2">Pudir-2</option>
-                                    <option value="pudir3">Pudir-3</option>
-                                    <option value="manajemen">Manajemen</option>
-                                    <option value="dosen">Dosen</option>
-                                    <option value="pegawai">Pegawai</option>
-                                </select>
-                                <div class="text-danger">
-                                    @error('jabatan')
-                                        Jabatan tidak boleh kosong.
-                                    @enderror
+                                    <label for="isi">Persyaratan dan Cara Pendaftaran
+                                    <textarea class="textarea" name="isi"
+                                        placeholder="Place some text here">{{ old('isi') }}</textarea>
+                                    <div class="text-danger">
+                                        @error('isi')
+                                            isi tidak boleh kosong.
+                                        @enderror
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+
                         <!-- /.card-body -->
                         <div class="modal-footer justify-content-between">
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i

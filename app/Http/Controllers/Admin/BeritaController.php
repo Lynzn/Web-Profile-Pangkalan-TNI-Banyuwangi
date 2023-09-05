@@ -43,7 +43,6 @@ class BeritaController extends Controller
         $this->validate($request, [
             'judul_berita' => 'required',
             'isi'          => 'required',
-            'user_id'        => 'required',
             'gambar'          => 'required|file|mimes:jpeg,png,jpg|max:2024',
         ]);
 
