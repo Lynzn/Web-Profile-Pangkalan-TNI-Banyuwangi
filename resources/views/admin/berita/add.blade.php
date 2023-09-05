@@ -1,10 +1,10 @@
 @extends('layout_admin.template')
 @section('heading')
-    <h1 class="lead">Berita</h1>
+    <h1 class="lead">Masukkan Berita</h1>
 @endsection
 
 @section('page')
-    <li class="breadcrumb-item active">Berita</li>
+    <li class="breadcrumb-item active">Masukkan Berita</li>
 @endsection
 @section('content')
     <!-- Main content -->
@@ -39,21 +39,6 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="form-group  w-50">
-                                    <label for="user_id">Kepala Bagian</label>
-                                    <select name="user_id" value="{{ old('user_id') }}"
-                                        class="form-control @error('user_id') is-invalid @enderror">
-                                        <option value="">-- Pilih Kepala Bagian --</option>
-                                        <option value="1">Kaprodi</option>
-                                        <option value="2">BAAK</option>
-                                        <option value="2">Kemahasiswaan</option>
-                                    </select>
-                                    <div class="text-danger">
-                                        @error('user_id')
-                                            atuhor tidak boleh kosong.
-                                        @enderror
-                                    </div>
-                                </div>
                                 <div class="form-group w-50">
                                     <label for="gambar">Pilih File</label>
                                     <div class="input-group">
@@ -66,7 +51,7 @@
                                     </div>
                                     <div class="text-danger">
                                         @error('gambar')
-                                            atuhor tidak boleh kosong.
+                                            Foto tidak boleh kosong.
                                         @enderror
                                     </div>
                                 </div>

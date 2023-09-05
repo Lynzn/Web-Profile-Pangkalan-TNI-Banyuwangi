@@ -18,7 +18,6 @@ class CreateBeritaTable extends Migration
             $table->string('judul_berita');
             $table->string('slug_berita');
             $table->text('isi');
-            $table->string('user_id');
             $table->date('publish');
             $table->string('gambar');
             $table->timestamps();

@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AMIK Medicom | Login</title>
+    <link rel="shrotcut icon" href="{{ asset('assets/images/logokecillanal.png') }}">
+    <title>Lanal Banyuwangi</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
@@ -22,7 +23,7 @@
     <div class="login-box">
         <div class="login-logo p-3">
             <a href="{{ '/' }}">
-                <img src="{{ asset('assets/images/logo-top-1.png') }}" class="img img-responsive"
+                <img src="{{ asset('assets/images/logolanal.png') }}" class="img img-responsive"
                     style="width: auto; max-width: 80%;">
             </a>
         </div>

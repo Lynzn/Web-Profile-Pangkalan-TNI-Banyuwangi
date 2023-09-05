@@ -1,5 +1,5 @@
 @extends('layouts.index')
-@section('heading', 'Visi, Misi Institusi Akademi Informatika Dan Komputer Medicom')
+@section('heading', 'Visi, Misi Motto LANAL BANYUWANGI')
 @section('page')
     <span>Profile</span>
     <span class="mx-3 fas fa-angle-right"></span>
@@ -15,10 +15,9 @@
                     <div class="card-title about__text mb-4">
                         <div class="section-title pb-4">
                             <h4 class="text-center">VISI</h4>
-                            <p>Visi Politeknik Negeri Banyuwangi adalah :
+                            <p>Visi Pangkalan TNI AL Banyuwangi adalah :
                                 <br>
-Menjadi Lembaga Pendidikan Tinggi vokasional yang bermutu, berkemampuan ilmu pengetahuan dan teknologi, inovatif, dan berdaya saing.
-</p>
+                                “MENJADI CENTER OF EXCELLENCE (COE) PRAJURIT KESEHATAN MATRA LAUT“</p>
                         </div>
 
                         <div class="section-title pb-4">
@@ -26,21 +25,23 @@ Menjadi Lembaga Pendidikan Tinggi vokasional yang bermutu, berkemampuan ilmu pen
                             <p>Misi Politeknik Negeri Banyuwangi adalah</p>
 
                             <ol>
-                                <li> Menyelenggarakan pendidikan yang bermutu sesuai standar nasional pendidikan tinggi untuk menghasilkan lulusan yang kompeten dan profesional.</li>
-                                <li> Melaksanakan penelitian terapan dan pengabdian kepada masyarakat dalam rangka meningkatkan kualitas Sivitas Akademika sesuai dengan permasalahan industri dan masyarakat.</li>
-                                <li> Meningkatkan akses, relevansi, kemampuan ilmu pengetahuan dan teknologi dan invoasi untuk sumber daya manusia yang berkualitas.</li>
+                                <li> Menanamkan dan membentuk prajurit kesahatan TNI AL yang bermental juang tinggi dan berjiwa Sapta Marga</li>
+                                <li> Membekali dan menumbuhkan prajurit kesehatan TNI AL kemampuan teknis, taktis dan profesional dalam dukungan kesehatan lapangan serta berkarakter kenyal, ulet dan dinamis.</li>
+                                <li> Menumbuhkan dan mengembangkan sikap profesionalisme prajurit kesehatan TNI AL sesuai bidang tugas dan profesinya.</li>
+                                <li> Menanamkan dan menumbuhkan prajurit kesehatan TNI AL sikap bertanggung jawab dan berintegritas tinggi dalam tugas.</li>
+                                <li> Membentuk prajurit kesehatan TNI AL berkesamaptaan jasmani yang prima dan operable dalam tugas operasi dan latihan.</li>
                             </ol>
                         </div>
 
                         <div class="section-title pb-4">
-                            <h4 class="text-center">TUJUAN</h4>
+                            <h4 class="text-center">MOTTO</h4>
+                            <h6 class="text-center">“TANGGAP TANGGON TRENGGINAS”</h6>
                             <ol>
-                                <li> >>>>>>>>>>>>></li>
-                                <li> >>>>>>>>>>>>></li>
-                                <li>>>>>>>>>>>>>>>>></li></li>
-                                <li>>>>>>>>>>>>>>>>>></li>
-                                <li> >>>>>>>>>>>>>>>>>>> </li>
+                                <li> TANGGAP : Cepat memahami dan mengidentifikasi masalah.</li>
+                                <li> TANGGON : Kepribadian yang tahan uji dan ulet.</li>
+                                <li> TRENGGINAS : Kesamaptaan jasmani yang prima dan handal.</li></li>
                             </ol>
+                            <h6 class="text-center">“BERANI BERMORAL DAN PROFESIONAL”</h6>
                         </div>
                     </div>
                 </div>
