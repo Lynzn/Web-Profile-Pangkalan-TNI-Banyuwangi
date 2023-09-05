@@ -119,6 +119,17 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('admin/staff', [StaffController::class, 'index'])->name('staff.index');
     Route::post('admin/staff/store', [StaffController::class, 'store'])->name('staff.store');
     Route::delete('admin/staff/destroy/{id_staff}', [StaffController::class, 'destroy'])->name('staff.destroy');
+    Route::get('admin/staff/{id_staff}', [StaffController::class, 'edit'])->name('staff.edit');
+    Route::patch('admin/staff/{id_staff}', [StaffController::class, 'update'])->name('staff.update');
+
+    // Pendaftaran
+    // Route::resource('admin/berita', 'BeritaController');
+    Route::get('admin/pendaftaran', [pendaftaranController::class, 'index'])->name('pendaftaran.index');
+    Route::get('admin/pendaftaran/create', [pendaftaranController::class, 'create'])->name('pendaftaran.create');
+    Route::post('admin/pendaftaran/store', [pendaftaranController::class, 'store'])->name('pendaftaran.store');
+    Route::delete('admin/pendaftaran/destroy/{id}', [pendaftaranController::class, 'destroy'])->name('pendaftaran.destroy');
+    Route::get('admin/pendaftaran/{id}', [pendaftaranController::class, 'show'])->name('pendaftaran.show');
+
 
     // Motivasi
     

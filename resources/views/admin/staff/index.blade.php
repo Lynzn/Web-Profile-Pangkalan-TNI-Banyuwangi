@@ -1,6 +1,5 @@
 @extends('layout_admin.template')
 @section('heading', 'Informasi Pendaftaran')
-
 @section('page')
     <li class="breadcrumb-item active">Informasi Pendaftaran</li>
 @endsection
@@ -45,7 +44,7 @@
                                                     method="post">
                                                     @csrf
                                                     @method('delete')
-                                                    <a href="{{ route('banner.edit', Crypt::encrypt($data->id_staff)) }}"
+                                                    <a href="{{ route('staff.edit', Crypt::encrypt($data->id_staff)) }}"
                                                         class="btn btn-success btn-sm"><i class="nav-icon fas fa-edit"></i>
                                                         &nbsp; Edit</a>
 
@@ -103,7 +102,7 @@
                                 <label for="nama">Jadwal Pendaftaran</label>
                                 <input type="text" name="nama" value="{{ old('nama') }}"
                                     class="form-control @error('nama') is-invalid @enderror"
-                                    placeholder="Ramson Rajagukguk, A.Md">
+                                    placeholder="Isikan Jadwal Pendaftaran">
                                 <div class="text-danger">
                                     @error('nama')
                                         Nama tidak boleh kosong.
@@ -114,7 +113,7 @@
                             <div class="form-group">
                                     <label for="isi">Persyaratan dan Cara Pendaftaran
                                     <textarea class="textarea" name="isi"
-                                        placeholder="Place some text here">{{ old('isi') }}</textarea>
+                                        placeholder="Masukkan Isian">{{ old('isi') }}</textarea>
                                     <div class="text-danger">
                                         @error('isi')
                                             isi tidak boleh kosong.

@@ -1,8 +1,8 @@
 @extends('layout_admin.template')
-@section('heading', 'Banner')
+@section('heading', 'Staff')
 
 @section('page')
-    <li class="breadcrumb-item active">Banner</li>
+    <li class="breadcrumb-item active">Staff</li>
 @endsection
 @section('content')
     <!-- Main content -->
@@ -11,23 +11,23 @@
             <div class="card">
                 <div class="row">
                     <div class="col-md-6">
-                        <form action="{{ route('banner.update', $banner->id_banner) }}" method="post"
+                        <form action="{{ route('staff.update', $staff->id_staff) }}" method="post"
                             enctype="multipart/form-data">
                             @csrf
                             @method('patch')
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="gambar_banner">Pilih File Banner</label>
+                                    <label for="gambar_staff">Pilih File Staff</label>
                                     <div class="input-group">
                                         <div class="custom-file">
                                             <input type="file"
-                                                class="custom-file-input  @error('gambar_banner') is-invalid @enderror"
-                                                name="gambar_banner">
-                                            <label class="custom-file-label" for="gambar_banner">Pilih File</label>
+                                                class="custom-file-input  @error('gambar_staff') is-invalid @enderror"
+                                                name="gambar_staff">
+                                            <label class="custom-file-label" for="gambar_staff">Pilih File</label>
                                         </div>
                                     </div>
                                     <div class="text-danger">
-                                        @error('gambar_banner')
+                                        @error('gambar_staff')
                                             Gambar tidak boleh kosong.
                                         @enderror
                                     </div>
@@ -35,9 +35,9 @@
 
                                 <div class="form-group">
                                     <label for="keterangan">Keterangan </label>
-                                    <input type="text" name="keterangan" value="{{ $banner->keterangan }}"
+                                    <input type="text" name="keterangan" value="{{ $staff->keterangan }}"
                                         class="form-control @error('keterangan') is-invalid @enderror"
-                                        placeholder="Keterangan Banner">
+                                        placeholder="Keterangan Staff">
                                     <div class="text-danger">
                                         @error('keterangan')
                                             Judul tidak boleh kosong.
@@ -49,7 +49,7 @@
                     <div class="col-md-6 mt">
                         <div class="mt-3">
                             <h3 class="lead">Gambar pada saat ini</h3>
-                            <img src="{{ asset($banner->gambar_banner) }}" class="img img-thumbnail" alt="" width="80%" />
+                            <img src="{{ asset($staff->gambar_staff) }}" class="img img-thumbnail" alt="" width="80%" />
                         </div>
                     </div>
                     <!-- /.card-body -->
@@ -77,7 +77,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#back').click(function() {
-                window.location = "{{ route('banner.index') }}";
+                window.location = "{{ route('staff.index') }}";
             });
         });
 
@@ -85,7 +85,7 @@
             bsCustomFileInput.init();
         });
 
-        $("#banner").addClass("active");
+        $("#Staff").addClass("active");
 
     </script>
 

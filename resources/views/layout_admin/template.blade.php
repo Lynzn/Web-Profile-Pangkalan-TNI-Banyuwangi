@@ -64,4 +64,9 @@
             @yield('content')
         </div>
         <!-- /.content-wrapper -->
-        @include('layout_admin.footer')
+    </div>
+    @include('layout_admin.footer')
+
+</body>
+
+</html>

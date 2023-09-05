@@ -14,7 +14,6 @@ class Berita extends Controller
         $str   = Str::class;
         $berita = Berita_Model::orderBy('id', 'desc')->get();
         $datetime = Berita_Model::select('publish')->get();
-
         $current = Carbon::now();
         $dt      = Carbon::yesterday();
         $data = [

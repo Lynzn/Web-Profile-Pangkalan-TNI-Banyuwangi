@@ -6,6 +6,7 @@
             </script> Pangkalan TNI AL Banyuwangi
         </p>
     </div>
+</footer>
     <script script src="{{ url('plugins/jquery/jquery.min.js') }}">
 
     </script>
@@ -47,7 +48,6 @@
             allowedExtensions: ['jpg', 'jpeg', 'png'],
             buttonsText: ['SIMPAN', 'BATAL'],
             buttonsColor: ['#30bf7d', '#ee5155', -15],
-            processUrl: '{{ route('ubahfoto') }}',
             withCSRF: ['_token', '{{ csrf_token() }}'],
             onSuccess: function(message, element, status) {
                 alert(message);
@@ -100,6 +100,3 @@
         </script>
     @endif
 
-    </body>
-
-    </html>

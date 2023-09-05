@@ -7,6 +7,7 @@ use App\Models\Staff_Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Crypt;
 
 class StaffController extends Controller
 {
@@ -87,9 +88,11 @@ class StaffController extends Controller
      * @param  \App\Models\Staff_Model  $staff_Model
      * @return \Illuminate\Http\Response
      */
-    public function edit(Staff_Model $staff_Model)
+    public function edit( $id_staff)
     {
-        //
+        $id_staff = Crypt::decrypt($id_staff);
+        $staff = Staff_Model::findorfail($id_staff);
+        return view('admin.staff.edit', compact('staff'));
     }
 
     /**
