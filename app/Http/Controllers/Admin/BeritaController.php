@@ -43,7 +43,7 @@ class BeritaController extends Controller
         $this->validate($request, [
             'judul_berita' => 'required',
             'isi'          => 'required',
-            'gambar'          => 'required|file|mimes:jpeg,png,jpg|max:2024',
+            'gambar'          => 'required|file|mimes:jpeg,png,jpg|max:5000',
         ]);
 
         $slug_berita = Str::slug($request->judul_berita, '-');
@@ -114,6 +114,6 @@ class BeritaController extends Controller
         Storage::disk('public')->delete($filename);
         $id->delete();
 
-        return redirect()->route('berita.index')->with('error', 'Data pengumuman berhasil dihapus');
+        return redirect()->route('berita.index')->with('error', 'Data berita berhasil dihapus');
     }
 }

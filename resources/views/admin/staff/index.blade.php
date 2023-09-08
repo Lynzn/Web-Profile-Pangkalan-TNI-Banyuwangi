@@ -1,7 +1,7 @@
 @extends('layout_admin.template')
 @section('heading', 'Informasi Pendaftaran')
 @section('page')
-    <li class="breadcrumb-item active">Informasi Pendaftaran</li>
+    <li class="breadcrumb-item active">Informasi    </li>
 @endsection
 @section('content')
     <!-- Main content -->

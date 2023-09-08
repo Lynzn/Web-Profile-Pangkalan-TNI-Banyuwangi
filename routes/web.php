@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AlumniController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\BeritaController;
 use App\Http\Controllers\Admin\MotivasiController;
+use App\Http\Controllers\Admin\PendaftaranController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\Admin\PengumumanController;
@@ -46,6 +47,9 @@ Route::get('pengumuman/{slug_pengumuman}', [Pengumuman::class, 'show'])->name('p
 Route::get('berita', [Berita::class, 'index'])->name('berita');
 Route::get('berita/{slug_berita}', [Berita::class, 'show'])->name('berita.detail');
 
+Route::get('pendaftaran', [Pendaftaran::class, 'index'])->name('pendaftaran');
+Route::get('pendaftaran/{slug_pendaftaran}', [Pendaftaran::class, 'show'])->name('pendaftaran.detail');
+
 Route::get('blog', [BlogController::class, 'index'])->name('blog');
 Route::get('blog/{slug}', [BlogController::class, 'show'])->name('blog.detail');
 
@@ -64,11 +68,6 @@ Route::get('peraturan_akademi', [PageController::class, 'peraturan_akademi'])->n
 Route::get('informasi_pendaftaran', [PageController::class, 'informasi_pendaftaran'])->name('info_pendaftaran');
 Route::get('biaya_pendidikan', [PageController::class, 'biaya_pendidikan'])->name('biaya_pendidikan');
 Route::get('kontak', [PageController::class, 'kontak'])->name('kontak');
-Route::get('pmb-pendaftaran', [PageController::class, 'pmbpendaftaran'])->name('pmb-pendaftaran');
-Route::get('pendaftaran_sukses', [PageController::class, 'pendaftaran_sukses'])->name('pendaftaran_sukses');
-Route::post('pendaftaran/store', [Pendaftaran::class, 'store'])->name('pendaftaran.store');
-Route::get('pendaftaran/{token}', [Pendaftaran::class, 'show'])->name('show');
-Route::get('pendaftaran/download/{token}', [Pendaftaran::class, 'download'])->name('download');
 
 // Route::resource('pendaftaran', Pendaftaran::class);
 
@@ -123,12 +122,12 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::patch('admin/staff/{id_staff}', [StaffController::class, 'update'])->name('staff.update');
 
     // Pendaftaran
-    // Route::resource('admin/berita', 'BeritaController');
-    Route::get('admin/pendaftaran', [pendaftaranController::class, 'index'])->name('pendaftaran.index');
-    Route::get('admin/pendaftaran/create', [pendaftaranController::class, 'create'])->name('pendaftaran.create');
-    Route::post('admin/pendaftaran/store', [pendaftaranController::class, 'store'])->name('pendaftaran.store');
-    Route::delete('admin/pendaftaran/destroy/{id}', [pendaftaranController::class, 'destroy'])->name('pendaftaran.destroy');
-    Route::get('admin/pendaftaran/{id}', [pendaftaranController::class, 'show'])->name('pendaftaran.show');
+    // Route::resource('admin/pendaftaran', 'pendaftaranController');
+    Route::get('admin/pendaftaran', [PendaftaranController::class, 'index'])->name('pendaftaran.index');
+    Route::get('admin/pendaftaran/create', [PendaftaranController::class, 'create'])->name('pendaftaran.create');
+    Route::post('admin/pendaftaran/store', [PendaftaranController::class, 'store'])->name('pendaftaran.store');
+    Route::delete('admin/pendaftaran/destroy/{id}', [PendaftaranController::class, 'destroy'])->name('pendaftaran.destroy');
+    Route::get('admin/pendaftaran/{id}', [PendaftaranController::class, 'show'])->name('pendaftaran.show');
 
 
     // Motivasi

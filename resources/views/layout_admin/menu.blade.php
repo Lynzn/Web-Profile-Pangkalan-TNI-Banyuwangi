@@ -38,7 +38,7 @@
                         
                         @can('berita_access')
                             <li class="nav-item">
-                                <a href="{{ route('staff.index') }}" class="nav-link" id="staff">
+                                <a href="{{ route('pendaftaran.index') }}" class="nav-link" id="staff">
                                     <i class="nav-icon fas fa-scroll"></i>
                                     <p>Informasi Pendaftaran</p>
                                 </a>

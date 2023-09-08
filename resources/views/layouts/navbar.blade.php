@@ -53,7 +53,7 @@
                             data-bs-toggle="dropdown" aria-expanded="false">PENDAFTARAN</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="{{ route('info_pendaftaran') }}">Informasi
+                                <a class="dropdown-item" href="{{ route('pendaftaran') }}">Informasi
                                     Pendaftaran</a>
                             </li>
                             

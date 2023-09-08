@@ -1,8 +1,7 @@
 <?php
-
-namespace App\Http\Controllers;
-
-use App\Models\Pendaftaran_model;
+namespace App\Http\Controllers\Admin;
+use App\Http\Controllers\Controller;
+use App\Models\Pendaftaran_Model;
 use Illuminate\Support\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -18,8 +17,8 @@ class PendaftaranController extends Controller
      */
     public function index()
     {
-        $berita = Pendaftaran_Model::all();
-        return view('admin.berita.index', compact('berita'));
+        $pendaftaran = Pendaftaran_Model::all();
+        return view('admin.pendaftaran.index', compact('pendaftaran'));
     }
 
     /**
@@ -29,7 +28,7 @@ class PendaftaranController extends Controller
      */
     public function create()
     {
-        return view('admin.berita.add');
+        return view('admin.pendaftaran.add');
     }
 
     /**
@@ -41,21 +40,21 @@ class PendaftaranController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'judul_berita' => 'required',
+            'judul_pendaftaran' => 'required',
             'isi'          => 'required',
             'gambar'          => 'required|file|mimes:jpeg,png,jpg|max:2024',
         ]);
 
-        $slug_berita = Str::slug($request->judul_berita, '-');
+        $slug_pendaftaran = Str::slug($request->judul_pendaftaran, '-');
         $gambar = $request->gambar;
         $new_gambar = date('s' . 'i' . 'H' . 'd' . 'm' . 'Y') . '_' . $gambar->getClientOriginalName();
 
         $data = $request->all();
-        $data['slug_berita'] = $slug_berita;
+        $data['slug_pendaftaran'] = $slug_pendaftaran;
         $data['publish'] = date('Ymd');
-        $data['gambar'] = 'assets/images/berita/' . $new_gambar;
+        $data['gambar'] = 'assets/images/pendaftaran/' . $new_gambar;
 
-        $gambar->storeAs('assets/images/berita/', $new_gambar);
+        $gambar->storeAs('assets/images/pendaftaran/', $new_gambar);
 
         // echo $data['gambar'];
         // die;
@@ -63,7 +62,7 @@ class PendaftaranController extends Controller
 
 
 
-        return redirect('admin/berita')->with('success', 'Berhasil menambahkan data Berita baru');
+        return redirect('admin/pendaftaran')->with('success', 'Berhasil menambahkan data pendaftaran baru');
     }
 
     /**
@@ -75,8 +74,8 @@ class PendaftaranController extends Controller
     public function show(Pendaftaran_Model $id)
     {
         $id = Crypt::decrypt($id);
-        $berita = $id;
-        return view('admin.berita.details', compact('berita'));
+        $pendaftaran = $id;
+        return view('admin.pendaftaran.details', compact('pendaftaran'));
     }
 
     /**
@@ -94,7 +93,7 @@ class PendaftaranController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Pendaftaran_Model  $berita
+     * @param  \App\Models\pendaftaran  $berita
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Pendaftaran_Model $berita)
@@ -105,7 +104,7 @@ class PendaftaranController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Pendaftaran_Model  $berita
+     * @param  \App\Models\pendaftaran  $berita
      * @return \Illuminate\Http\Response
      */
     public function destroy(Pendaftaran_Model $id)
@@ -114,6 +113,6 @@ class PendaftaranController extends Controller
         Storage::disk('public')->delete($filename);
         $id->delete();
 
-        return redirect()->route('berita.index')->with('error', 'Data pengumuman berhasil dihapus');
+        return redirect()->route('pendaftaran.index')->with('error', 'Data pendaftaran berhasil dihapus');
     }
 }

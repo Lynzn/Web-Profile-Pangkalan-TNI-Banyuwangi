@@ -5,19 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Pendaftaran_model extends Model
+class Pendaftaran_Model extends Model
 {
     use HasFactory;
-    protected $guarded =  ['id'];
+    protected $fillable = ['judul_pendaftaran', 'slug_pendaftaran', 'isi', 'publish', 'gambar'];
+
     protected $table = 'pendaftaran';
-    protected $dates = ['deleted_at'];
-
-
-    public function getRouteKeyName()
-    {
-        return 'token';
-    }
-
-    
-
 }
