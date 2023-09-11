@@ -54,6 +54,15 @@
                             </li>
                         @endcan
 
+                        @can('alumni_access')
+                            <li class="nav-item">
+                                <a href="{{ route('petinggi.index') }}" class="nav-link" id="Alumni">
+                                    <i class="nav-icon fas fa-user"></i>
+                                    <p> Petinggi </p>
+                                </a>
+                            </li>
+                        @endcan
+
 
 
 

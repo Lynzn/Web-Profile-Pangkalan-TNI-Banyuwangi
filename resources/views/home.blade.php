@@ -8,22 +8,37 @@
         </div>
     </section>
     <!-- /hero slider -->
-
-    <!-- Komandan Lanal Bwi -->
     <div class="news-updates">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card-pengumuman">
-                        <div class="team__item">
-                            <div class="team_cover">
-                                <img src="assets/images/fjabatan/dimyati.jpg" alt="">
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                <div class="card-header news-title" style="background: white; font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; text-transform: uppercase; color: #333;">
+                    <h2>Komandan Lanal Bwi</h2>
+                </div>
+                    <div class="card-body">
+                        @foreach ($petinggi as $file)
+                        <div class="news">
+                            <div class="news-image">
+                                <a href="{{ URL::asset($file->gambar)}}" target="_blank">
+                                    <img src="{{ URL::asset($file->gambar)}}" alt="Image" class="img-fluid" width="80%" style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">
+                                </a>
                             </div>
-                            <h5>Komandan TNI Angkatan Laut Banyuwangi</h5>
-                            <span>Indra Nusha Raspati</span>
+                            <div class="news-content">
+                                <h3 class="news-title">
+                                    <a href="#">{{ Str::limit($file->judul_petinggi, 45, '...') }}</a>
+                                </h3>
+                                <p class="news-description">
+                                    {!! Str::limit(strip_tags($file->isi), $limit = 50, $end = '...') !!}
+                                </p>
+                            </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
+            </div>
+
+
                 <div class="col-lg-8 col-md-6">
                     <div class="card-pengumuman">
                         <div class="section-heading d-flex align-items-center justify-content-between">
@@ -203,6 +218,63 @@
 @endsection
 
 <style>
+/* CSS */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); /* Menambahkan efek 3D menggunakan box-shadow */
+    transition: box-shadow 0.3s ease-in-out; /* Efek transisi saat hover */
+    background-color: white;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Mengubah bayangan saat hover */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.news {
+    margin: 20px 0;
+}
+
+.news-image {
+    margin: 10px 0;
+}
+
+.news-content {
+    margin: 10px 0;
+}
+
+.news-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.news-description {
+    text-align: center;
+}
+
+
+.announcement {
+    margin: 20px 0; /* Jarak antara pengumuman */
+}
+
+.announcement-title {
+    font-size: 1.25rem; /* Ukuran font judul pengumuman */
+    margin-bottom: 10px; /* Jarak antara judul dan deskripsi */
+}
+
+.announcement-description {
+    text-align: center; /* Mengatur teks pengumuman ke tengah horizontal */
+}
+
 /* Kustomisasi tampilan tombol "Baca Selanjutnya" */
 .btn-primary {
     border-radius: 10px;

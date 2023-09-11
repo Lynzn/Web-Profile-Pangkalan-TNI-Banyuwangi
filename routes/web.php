@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\BeritaController;
 use App\Http\Controllers\Admin\MotivasiController;
 use App\Http\Controllers\Admin\PendaftaranController;
+use App\Http\Controllers\Admin\PetinggiController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\Admin\PengumumanController;
@@ -17,6 +18,7 @@ use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Berita;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\Pendaftaran;
+use App\Http\Controllers\Petinggi;
 use App\Http\Controllers\Pengumuman;
 use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Auth;
@@ -49,6 +51,9 @@ Route::get('berita/{slug_berita}', [Berita::class, 'show'])->name('berita.detail
 
 Route::get('pendaftaran', [Pendaftaran::class, 'index'])->name('pendaftaran');
 Route::get('pendaftaran/{slug_pendaftaran}', [Pendaftaran::class, 'show'])->name('pendaftaran.detail');
+
+Route::get('petinggi', [Petinggi::class, 'index'])->name('petinggi');
+Route::get('petinggi/{slug_petinggi}', [Petinggi::class, 'show'])->name('petinggi.detail');
 
 Route::get('blog', [BlogController::class, 'index'])->name('blog');
 Route::get('blog/{slug}', [BlogController::class, 'show'])->name('blog.detail');
@@ -128,6 +133,16 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('admin/pendaftaran/store', [PendaftaranController::class, 'store'])->name('pendaftaran.store');
     Route::delete('admin/pendaftaran/destroy/{id}', [PendaftaranController::class, 'destroy'])->name('pendaftaran.destroy');
     Route::get('admin/pendaftaran/{id}', [PendaftaranController::class, 'show'])->name('pendaftaran.show');
+
+    // petinggi
+    // Route::resource('admin/petinggi', 'PetinggiController');
+    Route::get('admin/petinggi', [PetinggiController::class, 'index'])->name('petinggi.index');
+    Route::get('admin/petinggi/create', [PetinggiController::class, 'create'])->name('petinggi.create');
+    Route::post('admin/petinggi/store', [PetinggiController::class, 'store'])->name('petinggi.store');
+    Route::delete('admin/petinggi/destroy/{id}', [PetinggiController::class, 'destroy'])->name('petinggi.destroy');
+    Route::get('admin/petinggi/{id}', [PetinggiController::class, 'show'])->name('petinggi.show');
+    Route::patch('admin/petinggi/update/{id}', [PetinggiController::class, 'update'])->name('petinggi.update');
+    Route::get('admin/petinggi/{id}', [PetinggiController::class, 'edit'])->name('petinggi.edit');
 
 
     // Motivasi

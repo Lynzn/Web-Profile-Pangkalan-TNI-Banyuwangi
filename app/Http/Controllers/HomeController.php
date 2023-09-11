@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Alumni_Model;
 use App\Models\Banner;
 use App\Models\Berita_Model;
+use App\Models\Petinggi_Model;
 use App\Models\Home;
 use App\Models\Pengumuman_Model;
 use Illuminate\Support\Str;
@@ -22,7 +23,7 @@ class HomeController extends Controller
     public function index()
     {
         $Mpengumuman = new Pengumuman_Model();
-
+        $petinggi = Petinggi_Model::orderBy('id', 'desc')->take(1)->get();
         $banner = Banner::orderBy('id_banner', 'desc')->take(3)->get();
         $berita = Berita_Model::orderBy('id', 'desc')->take(4)->get();
         $alumni = Alumni_Model::orderBy('id_alumni', 'desc')->take(5)->get();
@@ -33,7 +34,7 @@ class HomeController extends Controller
             'banner'        => $banner,
             'Str'   => Str::class,
         ];
-        return view('home', compact('data', 'banner', 'pengumuman', 'berita', 'alumni'));
+        return view('home', compact('data', 'banner', 'pengumuman', 'petinggi' ,'berita', 'alumni'));
     }
 
     /**

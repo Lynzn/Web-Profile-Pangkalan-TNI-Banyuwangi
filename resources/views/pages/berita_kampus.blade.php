@@ -23,7 +23,7 @@
                                 </div>
                                 <div class="text bg-white berita p-4">
                                     <h3 class="heading"><a href="{{ route('berita.detail', $item->slug_berita) }}">{{ $item->judul_berita }}</a></h3>
-                                    <p class="mb-4"><?= Str::limit(strip_tags($item->isi), 150, $end = '...') ?></p>
+                                    <p class="mb-4"><?= Str::limit(strip_tags($item->isi), 100, $end = '...') ?></p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <a href="{{ route('berita.detail', $item->slug_berita) }}" class="btn btn-primary">Baca Selengkapnya</a>
                                         <span class="fa fa-clock-o">{{ tanggal('tanggal', $item->publish) }} {{ tanggal('bulan', $item->publish) }} {{ tanggal('tahun', $item->publish) }}</span>
