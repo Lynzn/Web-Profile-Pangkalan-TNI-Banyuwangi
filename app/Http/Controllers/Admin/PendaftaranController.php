@@ -42,7 +42,7 @@ class PendaftaranController extends Controller
         $this->validate($request, [
             'judul_pendaftaran' => 'required',
             'isi'          => 'required',
-            'gambar'          => 'required|file|mimes:jpeg,png,jpg|max:2024',
+            'gambar'          => 'required|file|mimes:jpeg,png,jpg|max:5000',
         ]);
 
         $slug_pendaftaran = Str::slug($request->judul_pendaftaran, '-');
@@ -104,7 +104,7 @@ class PendaftaranController extends Controller
         $this->validate($request, [
             'judul_pendaftaran' => 'required',
             'isi_pendaftaran'   => 'required',
-            'gambar'          => 'required|file|mimes:jpeg,png,jpg|max:2024',
+            'gambar'          => 'required|file|mimes:jpeg,png,jpg|max:5000',
         ]);
 
 

@@ -17,7 +17,7 @@ class CreatePendaftaransTable extends Migration
                 $table->bigIncrements('id');
                 $table->string('judul_pendaftaran');
                 $table->string('slug_pendaftaran');
-                $table->text('isi');
+                $table->longText('isi');
                 $table->date('publish');
                 $table->string('gambar');
                 $table->timestamps();

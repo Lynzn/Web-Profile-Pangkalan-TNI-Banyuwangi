@@ -22,7 +22,7 @@
                                     <label for="judul_pendaftaran">Judul pendaftaran </label>
                                     <input type="text" name="judul_pendaftaran" value="{{ old('judul_pendaftaran') }}"
                                         class="form-control @error('judul_pendaftaran') is-invalid @enderror"
-                                        placeholder="judul_pendaftaran">
+                                        placeholder="Masukkan Judul Pendaftaran">
                                     <div class="text-danger">
                                         @error('judul_pendaftaran')
                                             Judul tidak boleh kosong.
@@ -85,6 +85,10 @@
             bsCustomFileInput.init();
         });
         $("#pendaftaran").addClass("active");
+    </script>
+
+    <script>
+        $()
     </script>
 
     <script type="text/javascript">

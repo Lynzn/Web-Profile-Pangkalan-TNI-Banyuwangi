@@ -21,14 +21,14 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>{{ $staff }}<sup style="font-size: 20px"></sup></h3>
+                            <h3>{{ $berita }}<sup style="font-size: 20px"></sup></h3>
 
                             <p>Berita & Artikel</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="{{ route('berita.index') }}" class="small-box-footer">More info <i
+                        <a href="{{ route('berita.index') }}" class="small-box-footer">Lihat Selengkapnya <i
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="{{ route('alumni.index') }}" class="small-box-footer">More info <i
+                        <a href="{{ route('alumni.index') }}" class="small-box-footer"> Lihat Selengkapnya <i
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
@@ -53,13 +53,13 @@
                 <div class="col-lg-3 col-6">
                 <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>{{ $staff }}</h3>
+                            <h3>{{ $pendaftaran }}</h3>
                             <p>Informasi Pendaftaran</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="{{ route('staff.index') }}" class="small-box-footer">Lihat Selengkapnya <i
+                        <a href="{{ route('pendaftaran.index') }}" class="small-box-footer">Lihat Selengkapnya <i
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>

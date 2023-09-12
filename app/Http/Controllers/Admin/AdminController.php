@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Alumni_Model;
+use App\Models\Berita_Model;
+use App\Models\Pendaftaran_Model;
 use App\Models\Pengumuman_model;
 use App\Models\Staff_Model;
 use App\Models\User;
@@ -24,17 +26,19 @@ class AdminController extends Controller
     public function index()
     {
         
-        $user       = User::count();
-        $staff      = Staff_Model::count();
-        $alumni     = Alumni_Model::count();
-        $takeuser = User::orderBy('id', 'desc')->take(3)->get();
-        $pengumuman = Pengumuman_model::orderBy('id', 'desc')->take(3)->get();
+        $user           = User::count();
+        $staff          = Staff_Model::count();
+        $alumni         = Alumni_Model::count();
+        $berita         = Berita_Model::count();
+        $pendaftaran    = Pendaftaran_Model::count();
+        $takeuser       = User::orderBy('id', 'desc')->take(3)->get();
+        $pengumuman     = Pengumuman_model::orderBy('id', 'desc')->take(3)->get();
 
         $data = [
             'title' => 'AMIK Medicom',
             'username' => 'Ramson Rajagukguk',
             'jumlah_dosen' => '20'
         ];
-        return view('admin.index', compact('data', 'user', 'staff', 'alumni', 'pengumuman', 'takeuser'));
+        return view('admin.index', compact('data', 'user', 'staff', 'alumni','berita', 'pendaftaran','pengumuman', 'takeuser'));
     }
 }

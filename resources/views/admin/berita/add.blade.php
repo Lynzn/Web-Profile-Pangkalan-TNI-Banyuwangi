@@ -94,6 +94,4 @@
         window.location.href = "{{ route('berita.index') }}";
         });
     </script>
-
-    adelina
 @endsection

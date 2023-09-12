@@ -30,7 +30,7 @@
                                 <div class="form-group">
                                     <label for="isi_pendaftaran">Isi pendaftaran</label>
                                     <textarea class="textarea" name="isi_pendaftaran"
-                                        placeholder="Place some text here">{{ old('isi_pendaftaran') }}</textarea>
+                                        placeholder="Place some text here">{{ old('isi') }}</textarea>
                                     <div class="text-danger">
                                         @error('isi_pendaftaran')
                                             isi tidak boleh kosong.

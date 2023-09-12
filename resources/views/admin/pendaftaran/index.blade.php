@@ -25,8 +25,8 @@
                                     <tr>
                                         <th>No.</th>
                                         <th>Gambar</th>
-                                        <th width="60%">Judul Berita</th>
-                                        <th>Aksi</th>
+                                        <th width="60%">Judul Informasi</th>
+                                        <th >Aksi </th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -38,7 +38,6 @@
                                             <td>{{ $data->judul_pendaftaran }}</td>
                                             </td>
                                             <td>
-
                                                     <form action="{{ route('pendaftaran.destroy', $data->id) }}" method="post">
                                                     @csrf
                                                     @method('delete')
