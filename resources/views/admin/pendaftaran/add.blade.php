@@ -90,7 +90,7 @@
     <script type="text/javascript">
         document.getElementById("kembaliButton").addEventListener("click", function() {
         // Mengarahkan pengguna ke halaman indeks
-        window.location.href = "{{ route('petinggi.index') }}";
+        window.location.href = "{{ route('pendaftaran.index') }}";
         });
     </script>
 
