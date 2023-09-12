@@ -92,7 +92,7 @@
 
     </script>
     <script type="text/javascript">
-    document.getElementById("kembaliButton").addEventListener("click", function() {
+        document.getElementById("kembaliButton").addEventListener("click", function() {
         // Mengarahkan pengguna ke halaman indeks
         window.location.href = "{{ route('petinggi.index') }}";
         });
