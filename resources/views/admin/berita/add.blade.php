@@ -56,9 +56,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- /.card-body -->
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Simpan</button>
+                          
+                          <!--card footer-->
+                          <div class="card-footer">
+                                <div class="float-left">
+                                    <button id="kembaliButton" type="button" class="btn btn-default"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</button>
+                                </div>
+                                <div class="float-right">
+                                    <button type="submit" class="btn btn-primary">Simpan</button>
+                                </div>
+                                <div class="clearfix"></div>
                             </div>
                         </form>
                     </div>
@@ -79,9 +86,12 @@
             bsCustomFileInput.init();
         });
         $("#berita").addClass("active");
-
-        // Summernote
-
     </script>
-
+    
+    <script type="text/javascript">
+        document.getElementById("kembaliButton").addEventListener("click", function() {
+        // Mengarahkan pengguna ke halaman indeks
+        window.location.href = "{{ route('petinggi.index') }}";
+        });
+    </script>
 @endsection

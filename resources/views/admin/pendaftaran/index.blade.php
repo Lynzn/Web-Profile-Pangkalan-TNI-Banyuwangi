@@ -38,10 +38,14 @@
                                             <td>{{ $data->judul_pendaftaran }}</td>
                                             </td>
                                             <td>
-                                                <form action="{{ route('pendaftaran.destroy', $data->id) }}" method="post">
+
+                                                    <form action="{{ route('pendaftaran.destroy', $data->id) }}" method="post">
                                                     @csrf
                                                     @method('delete')
-                                                        
+                                                    <a href="{{ route('pendaftaran.edit', $data->slug_pendaftaran) }}" class="btn btn-primary btn-sm">
+                                                        <i class="mr-2 nav-icon fas fa-edit"></i>Edit
+                                                    </a>
+
                                                     <button class="btn btn-danger btn-sm"><i
                                                             class="mr-2 nav-icon fas fa-trash-alt"></i>Hapus</button>
                                                 </form>
@@ -53,7 +57,8 @@
                         </div>
                         <!-- /.card-body -->
                     </div>
-                    <!-- /.card -->
+                      <!-- /.card-body -->
+                     
                 </div>
                 <!-- /.col -->
             </div>
@@ -65,6 +70,7 @@
 
 @section('script')
     <script type="text/javascript">
+        
         $("#pendaftaran").addClass("active");
 
     </script>

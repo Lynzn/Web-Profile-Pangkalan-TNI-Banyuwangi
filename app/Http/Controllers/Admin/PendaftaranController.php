@@ -84,9 +84,12 @@ class PendaftaranController extends Controller
      * @param  \App\Models\Berita  $berita
      * @return \Illuminate\Http\Response
      */
-    public function edit(Pendaftaran_Model $berita)
+    public function edit($slug_pendaftaran)
     {
-        //
+        // $id = Crypt::decrypt($id);
+        $pendaftaran = Pendaftaran_Model::where('slug_pendaftaran', $slug_pendaftaran)->first();
+        // dd($pendaftaran);
+        return view('admin.pendaftaran.edit', compact('pendaftaran'));
     }
 
     /**
@@ -96,9 +99,32 @@ class PendaftaranController extends Controller
      * @param  \App\Models\pendaftaran  $berita
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pendaftaran_Model $berita)
+    public function update(Request $request, Pendaftaran_Model $id)
     {
-        //
+        $this->validate($request, [
+            'judul_pendaftaran' => 'required',
+            'isi_pendaftaran'   => 'required',
+            'gambar'          => 'required|file|mimes:jpeg,png,jpg|max:2024',
+        ]);
+
+
+        // $id_berita = Pendaftaran_Model::findorfail($id);
+        $gambar = $request->file('gambar');
+
+        if (!empty($gambar)) {
+            $data = $request->all();
+            $gambar = $request->file('gambar');
+            $new_gambar = date('s' . 'i' . 'H' . 'd' . 'm' . 'Y') . '_' . $gambar->GetClientOriginalName();
+            $data['gambar'] = 'assets/images/pendaftaran/' . $new_gambar;
+            $gambar->storeAs('assets/images/pendaftaran', $new_gambar);
+            $id->update($data);
+            $id->update($data);
+        } else {
+            $data = $request->all();
+            $id->update($data);
+        }
+
+        return redirect()->route('pendaftaran.index')->with('success', 'Data pendaftaran berhasil diubah');
     }
 
     /**

@@ -68,5 +68,10 @@
         $("#berita").addClass("active");
 
     </script>
+    <script>
+        $(document).ready(function() {
+        $('.summernote').summernote();
+        });
+    </script>
 
 @endsection

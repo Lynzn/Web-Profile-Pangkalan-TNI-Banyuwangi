@@ -25,9 +25,9 @@
                                     <tr>
                                         <th>No.</th>
                                         <th>Gambar</th>
-                                        <th width="40%">Nama Komandan</th>
+                                        <th width="30%">Nama Komandan</th>
                                         <th width="50%">Pangkat</th>
-                                        <th width="20%"> Aksi</th>
+                                        <th width="40%"> Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -43,9 +43,9 @@
                                                 <form action="{{ route('petinggi.destroy', $data->id) }}" method="post">
                                                     @csrf
                                                     @method('delete')  
-                                                    <a href="{{ route('petinggi.edit',($data->id)) }}"
-                                                        class="btn btn-success btn-sm"><i class="nav-icon fas fa-edit"></i>
-                                                        &nbsp; Edit</a>  
+                                                    <a href="{{ route('petinggi.edit', $data->id) }}" class="btn btn-primary btn-sm">
+                                                        <i class="mr-2 nav-icon fas fa-edit"></i>Edit
+                                                    </a>  
                                                     <button class="btn btn-danger btn-sm"><i
                                                             class="mr-2 nav-icon fas fa-trash-alt"></i>Hapus</button>
                                                 </form>

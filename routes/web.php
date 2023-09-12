@@ -133,6 +133,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('admin/pendaftaran/store', [PendaftaranController::class, 'store'])->name('pendaftaran.store');
     Route::delete('admin/pendaftaran/destroy/{id}', [PendaftaranController::class, 'destroy'])->name('pendaftaran.destroy');
     Route::get('admin/pendaftaran/{id}', [PendaftaranController::class, 'show'])->name('pendaftaran.show');
+    Route::patch('admin/pendaftaran/update/{id}', [PendaftaranController::class, 'update'])->name('pendaftaran.update');
+    Route::get('admin/pendaftaran/edit/{slug_pendaftaran}', [PendaftaranController::class, 'edit'])->name('pendaftaran.edit');
 
     // petinggi
     // Route::resource('admin/petinggi', 'PetinggiController');

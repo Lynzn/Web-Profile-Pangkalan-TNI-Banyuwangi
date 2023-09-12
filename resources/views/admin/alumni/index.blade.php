@@ -26,8 +26,7 @@
                                     <tr>
                                         <th>No.</th>
                                         <th>Gambar</th>
-                                        <th width="20%">Nama Kegiatan</th>
-                                        <th width="40%">Deskripsi Kegiatan</th>
+                                        <th>Nama Kegiatan</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -38,7 +37,7 @@
                                             <td> <img src="<?= asset($data->gambar) ?>" width="80px"
                                                     class="img-thumbnail">
                                             <td>{{ $data->nama_alumni }}</td>
-                                            <td>{{ $data->tempat_bekerja }}</td>
+                                            
                                             </td>
                                             <td>
                                                 <form action="{{ route('alumni.destroy', $data->id_alumni) }}"
@@ -90,7 +89,7 @@
                                     <div class="custom-file">
                                         <input type="file" class="custom-file-input  @error('gambar') is-invalid @enderror"
                                             name="gambar">
-                                        <label class="custom-file-label" for="gambar">Pilih File</label>
+                                        <label class="custom-file-label" for="gambar">Pilih Gambar</label>
                                     </div>
                                 </div>
                                 <div class="text-danger">
@@ -104,7 +103,7 @@
                                 <label for="nama_alumni">Nama Kegiatan</label>
                                 <input type="text" name="nama_alumni" value="{{ old('nama_alumni') }}"
                                     class="form-control @error('nama_alumni') is-invalid @enderror"
-                                    placeholder="Ramson Rajagukguk, A.Md">
+                                    placeholder="Isikan judul kegiatan">
                                 <div class="text-danger">
                                     @error('nama_alumni')
                                         Nama tidak boleh kosong.
@@ -112,18 +111,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label for="tempat_bekerja">Deskripsi Kegiatan </label>
-                                <input type="text" name="tempat_bekerja" value="{{ old('tempat_bekerja') }}"
-                                    class="form-control @error('tempat_bekerja') is-invalid @enderror"
-                                    placeholder="Komisari BUMN">
-                                <div class="text-danger">
-                                    @error('tempat_bekerja')
-                                        Tempat kerja tidak boleh kosong.
-                                    @enderror
-                                </div>
-                            </div>
-                        </div>
+                           
                         <!-- /.card-body -->
                         <div class="modal-footer justify-content-between">
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i

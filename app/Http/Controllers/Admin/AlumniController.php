@@ -42,7 +42,7 @@ class AlumniController extends Controller
     {
         $request->validate([
             'nama_alumni' => 'required|max:255',
-            'gambar' => 'required',
+            'gambar' => 'required|file|mimes:jpeg,png,jpg|max:5000',
             'tempat_bekerja' => 'required'
         ]);
 
