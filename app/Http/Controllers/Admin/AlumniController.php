@@ -41,9 +41,8 @@ class AlumniController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama_alumni' => 'required|max:255',
+            'nama_alumni' => 'required',
             'gambar' => 'required|file|mimes:jpeg,png,jpg|max:5000',
-            'tempat_bekerja' => 'required'
         ]);
 
         $data = $request->all();
@@ -97,7 +96,6 @@ class AlumniController extends Controller
         $this->validate($request, [
             'gambar'            => 'file|mimes:png,jpg|max:2024',
             'nama_alumni'       => 'required',
-            'tempat_bekerja'     => 'required',
         ]);
 
         // $id_banner = Alumni_Model::findorfail($id_alumni);
