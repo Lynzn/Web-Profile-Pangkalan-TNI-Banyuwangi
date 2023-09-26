@@ -32,8 +32,6 @@
                     <div class="col-lg-3 text-start">
                         <div class="main-info-area">
                             <div class="left-section wrap-logo-top">
-                                <a href="{{ url('/') }}" class="link-to-home"><img
-                                        src="assets/images/logolanal.png" alt="lanal" /></a>
                             </div>
                         </div>
                     </div>

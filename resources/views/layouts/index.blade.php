@@ -43,8 +43,6 @@
                     <div class="col-lg-3 text-start">
                         <div class="main-info-area">
                             <div class="left-section wrap-logo-top">
-                                <a href="{{ url('/') }}" class="link-to-home"><img
-                                        src="{{ asset('assets/images/logolanal.png') }}" alt="image" /></a>
                             </div>
                         </div>
                     </div>

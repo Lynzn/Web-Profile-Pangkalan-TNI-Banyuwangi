@@ -1,8 +1,8 @@
 <!-- navbar -->
 <div class="navigation w-100">
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4E6766;">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}"> <i class="fas fa-home"></i> </a>
+            <a class="navbar-brand" href="{{ url('/') }}"> <img src="{{ asset('assets/images/logolanal.png') }}" alt="Lanal Logo" width="200" height="200"> </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -58,12 +58,17 @@
                             </li>
                             
                         </ul>
-                    </li>
-
-                   
+                    </li>   
                 </ul>
             </div>
         </div>
     </nav>
 </div>
 {{-- navbar --}}
+
+<style>
+    /* Increase the padding for the navbar */
+    .navbar {
+        padding: 40px 0; /* You can adjust the values as needed */
+    }
+</style>
