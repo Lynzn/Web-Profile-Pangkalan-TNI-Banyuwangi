@@ -3,7 +3,7 @@
     <h1>Form Pengumuman</h1>
 @endsection
 @section('page')
-    <li class="breadcrumb-item active">Pengumuman</li>
+    <li class="breadcrumb-item active">Struktur Organisasi</li>
 @endsection
 @section('content')
     <!-- Main content -->

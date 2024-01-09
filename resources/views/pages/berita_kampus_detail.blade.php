@@ -23,13 +23,18 @@
                     </ul>
                     <img src="{{ URL::asset($berita->gambar)}}" alt="" class="img-fluid">
                     <p class="mt-3">{!! $berita->isi !!}</p>
+                    <div>
+                        <a href="{{ $berita->link_ig }}" target="blank">
+                        {{ $berita->link_ig }}
+                        </a>
+                    </div>
                 </div>
             </div>
 
                 <!-- .col-md-8 -->
                 <div class="col-lg-6 sidebar">
                 <div class="sidebar-box">
-                    <h2 class="sidebar-heading pt-3" style="margin-bottom: 20px; font-family: 'Helvetica Neue', sans-serif; font-weight: bold;">Popular Articles</h2>
+                    <h2 class="sidebar-heading pt-3" style="margin-bottom: 20px; font-family: 'Helvetica Neue', sans-serif; font-weight: bold;">Popular Artikel</h2>
                     @foreach ($berita_populer as $item)
                         <div class="block-21 mb-4 d-flex">
                         <div class="sidebar">

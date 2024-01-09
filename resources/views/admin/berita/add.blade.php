@@ -29,16 +29,18 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="isi">Isi Berita</label>
-                                    <textarea class="textarea" name="isi"
-                                        placeholder="Place some text here">{{ old('isi') }}</textarea>
-                                    <div class="text-danger">
-                                        @error('isi')
-                                            isi tidak boleh kosong.
-                                        @enderror
-                                    </div>
+                                User
+                            <div class="form-group">
+                                <label for="isi">Isi Berita</label>
+                                <textarea class="textarea" name="isi" placeholder="Place some text here">{{ old('isi') }}</textarea>
+                                <small class="text-muted">Example: To learn more, visit <a href="https://example.com" target="_blank">Example Website</a></small>
+                                <div class="text-danger">
+                                    @error('isi')
+                                        Isi tidak boleh kosong.
+                                    @enderror
                                 </div>
+                            </div>
+
                                 <div class="form-group w-50">
                                     <label for="gambar">Pilih File</label>
                                     <div class="input-group">
@@ -55,6 +57,16 @@
                                         @enderror
                                     </div>
                                 </div>
+                                <div class="form-group w-50">
+                                    <label for="link_ig">Link Instagram </label>
+                                    <input type="text" name="link_ig" value="{{ old('link_ig') }}"
+                                        class="form-control @error('link_ig') is-invalid @enderror"
+                                        placeholder="Masukkan Link Instagram">
+                                    <div class="text-danger">
+                                        @error('link_ig')
+                                            Judul tidak boleh kosong.
+                                        @enderror
+                                    </div>
                             </div>
                           
                           <!--card footer-->

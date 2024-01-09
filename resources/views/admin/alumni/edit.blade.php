@@ -2,7 +2,7 @@
 @section('heading', 'Edit Dokumentasi LANAL')
 
 @section('page')
-    <li class="breadcrumb-item active">Dokumentasi Kegiatan LANAL</li>
+    <li class="breadcrumb-item active">Dokumentasi Kegiatan</li>
 @endsection
 @section('content')
     <!-- Main content -->

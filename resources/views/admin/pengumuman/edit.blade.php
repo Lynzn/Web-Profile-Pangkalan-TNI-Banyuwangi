@@ -1,8 +1,8 @@
 @extends('layout_admin.template')
 @section('heading', 'Edit Pengumuman')
 @section('page')
-    <li class="breadcrumb-item "><a href="{{ route('pengumuman') }}">Pengumuman</a></li>
-    <li class="breadcrumb-item active">Edit Pengumuman</li>
+    <li class="breadcrumb-item "><a href="{{ route('pengumuman') }}">Struktur Organisasi</a></li>
+    <li class="breadcrumb-item active">Edit Struktur Organisasi</li>
 @endsection
 @section('content')
     <!-- Main content -->

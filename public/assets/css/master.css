@@ -7,7 +7,7 @@
 body {
     font-family: "Poppins", sans-serif;
     -webkit-font-smoothing: antialiased;
-    color: #5c5c77;
+    color: rgb(158, 158, 179);
     background: #f4f9fc;
 }
 
@@ -485,7 +485,7 @@ link:focus,
     width: 100%;
     top: 0;
     left: 0;
-    background: #1a1a37;
+    background: #22222c;
     opacity: 0.8;
 }
 

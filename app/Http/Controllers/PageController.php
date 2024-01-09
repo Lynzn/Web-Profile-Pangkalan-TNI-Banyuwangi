@@ -88,6 +88,11 @@ class PageController extends Controller
         return view('pages.kontak');
     }
 
+    public function struktur_organisasi()
+    {
+        return view('pages.struktur_organisasi');
+    }
+
     public function login()
     {
         $data = [

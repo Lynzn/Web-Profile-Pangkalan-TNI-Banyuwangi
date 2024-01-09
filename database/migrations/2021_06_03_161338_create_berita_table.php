@@ -20,6 +20,7 @@ class CreateBeritaTable extends Migration
             $table->text('isi');
             $table->date('publish');
             $table->string('gambar');
+            $table->string('link_ig')->nullable();
             $table->timestamps();
         });
     }

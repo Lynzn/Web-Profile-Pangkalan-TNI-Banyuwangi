@@ -79,7 +79,6 @@ class AlumniController extends Controller
      */
     public function edit($id_alumni)
     {
-        $id_alumni = Crypt::decrypt($id_alumni);
         $alumni = Alumni_Model::findorfail($id_alumni);
         return view('admin.alumni.edit', compact('alumni'));
     }
@@ -128,6 +127,6 @@ class AlumniController extends Controller
         $filename = $id_alumni->gambar;
         Storage::disk('public')->delete($filename);
         $id_alumni->delete();
-        return redirect()->route('alumni.index')->with('success', 'Data Alumni berhasil dihapus');
+        return redirect()->route('alumni.index')->with('error', 'Data Alumni berhasil dihapus');
     }
 }

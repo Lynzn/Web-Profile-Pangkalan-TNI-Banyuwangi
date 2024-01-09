@@ -1,8 +1,6 @@
 @extends('layouts.index')
 @section('heading', 'Sejarah Lanal Banyuwangi')
 @section('page')
-    <span>Profile</span>
-    <span class="mx-3 fas fa-angle-right"></span>
     <span class="current">Sejarah Lanal Banyuwangi</span>
 @endsection
 @section('content')
@@ -29,11 +27,15 @@
 
                         <div class="section-informasi mt-5 mb-4" data-aos="fade-up">
                         <h3 class="text-center text-uppercase">Sejarah Lanal Banyuwangi</h3>
-                        <p>Kekalahan kekaisaran Jepang dalam Perang Pasifik (1941-1945) ditandai dengan peandatanganan pernyataan menyerah tanpa syarat seluruh kekuatan militer Jepang kepada sekutu di atas kapal perang AL Amerika USS Missouri. Setelah penandatanganan kemudian dilanjutkan dengan pengumuman kepada seluruh kesatuan Jepang di wilayah pendudukan untuk tidak melakukan kegiatan apapun sementara menunggu kedatangan pasukan sekutu yang akan melucuti dan memulangkan mereka ke negara induk Jepang. Berita penyerahan Jepang kepada sekutu diumumkan keseluruh penjuru dunia melalui radio. Para tokoh pergerakan Indonesia yang mendengar hal tersebut memanfaatkan momen itu dengan segera mempersiapkan kemerdekaan Indonesia. Tapi hal tersebut tidak berjalan dengan mudah karena pasukan Jepang yang berada di Indonesia tidak mendukung, mereka mempertahankan status quo dalam rangka penyerahan wilayah Indonesia kepada pihak sekutu, hal ini merupakan tantangan bagi para pejuang kemerdekaan untuk dapat memproklamirkan kemerdekaan sebelum pihak sekutu yang dibonceng Belanda tiba di Indonesia.</p>
-                        <p>Pada tanggal 17 Agustus 1945 akhirnya Proklamasi Kemerdekaan Indonesia dikumandangkan di Jalan Pegangsaan Timur No. 56 Jakarta. Hal tersebut disambut oleh para pejuang didaerah dengan membentuk badan perjuangan. Badan-badan perjuangan inilah yang aktif melakukan pengambil alihan berbagai fasilitas pemerintahan, baik sipil, militer maupun kepolisian dari tangan pemerintah dan balatentara kekaisaran Jepang, termasuk merebut dan mengambil alih persenjataan.
-                        Para pemuda dan tokoh kemerdekaan yang pernah mengikuti organisasi atau pendidikan kemiliteran, baik semasa kolonial Belanda maupun pendudukan Jepang, membentuk suatu badan kemiliteran yaitu Badan Keamanan Rakyat (BKR) pada tanggal 22 Agustus 1945. Dikalangan para pejuang Bahari, para pemuda meresponnya dengan membentuk BKR Laut yang diresmikan pada tanggal 10 September 1945, Badan inilah yang kemudian menjadi BKR Laut pusat yang berkedudukan di Jakarta. Setelah itu dengan pembentukan BKR-BKR Laut di daerah-daerah termasuk Surabaya.</p>
-                        <p>Pada perkembangannya untuk menyesuaikan dengan situasi pada tanggal 05 Oktober 1945 Pemerintah Indonesia mengeluarkan maklumat No. 2/X yang secara resmi mengubah BKR menjadi Tentara Keamanan Rakyat (TKR), kemudian BKR Laut menyesuaikan menjadi TKR Laut. Di bidang organisasi, TKR Laut terjadi perkembangan menyangkut penegasan terhadap fungsi dan tugas utamanya, sehingga dibentuklah sistem pangkalan di setiap daerah di mana TKR laut berdiri.</p>
-                        </div>
+                        <h3>Dasar</h3>
+                        <p>A. Kep Kasal No. Kep/14/VII/2006 tanggal 25 Juli 2006 tentang perusahaan sebutan dan klasifikasi pangkalan-pangkalan TNI AL</p>
+                        <p>B. Telegram kasal nomor 001/SREN/0108 TWU 0103.1630 tentang perusahaan sebutan pangkalan</p>
+                        <h3>Sejarah Singkat</h3>
+                        <p>A. Pada tahun 1971, Detasemen TNI AL (Denal) Banyuwangi berkantor di kelurahan kertosari, Kecamatan Banyuwangi</p>
+                        <p>B. Pada tahun 1985 sional Banyuwangi berkantor di kelurahan pakis, Kecamatan Banyuwangi</p>
+                        <p>C. Pada tahun 1988 kembali menjadi Denal berkantor di desa ketapang, Kecamatan kalipuro</p>
+                        <p>D. Pada tanggal 21, bulan Juli tahun 1995 bernama Pangkalan TNI AL (Lanal) Banyuwangi berkantor di desa ketapang, Kecamatan kalipuro</p>
+                    </div>
                     </div>
                 </div>
             </div>

@@ -13,7 +13,7 @@ class CreateBannerTable extends Migration
      */
     public function up()
     {
-        Schema::create('banner', function (Blueprint $table) {
+        Schema::create('banners', function (Blueprint $table) {
             $table->increments('id_banner');
             $table->string('gambar_banner');
             $table->string('keterangan');
