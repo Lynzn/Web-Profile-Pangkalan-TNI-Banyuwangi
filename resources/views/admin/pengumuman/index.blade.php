@@ -1,9 +1,9 @@
 @extends('layout_admin.template')
 @section('heading')
-    <h1 class="lead">Pengumuman</h1>
+    <h1 class="lead">Struktur Organisasi</h1>
 @endsection
 @section('page')
-    <li class="breadcrumb-item active">Pengumuman</li>
+    <li class="breadcrumb-item active">Struktur Organisasi</li>
 @endsection
 @section('content')
     <!-- Main content -->
@@ -139,7 +139,7 @@
                                 Tambahkan</button>
                         </div>
                         <td>
-                                                <form action="{{ route('berita.destroy', $data->id) }}" method="post">
+                                                <form action="{{ route('admin.berita.destroy', $data->id) }}" method="post">
                                                     @csrf
                                                     @method('delete')
                                                         

@@ -1,5 +1,5 @@
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #4E6766;">
             <!-- Brand Logo -->
 
             <!-- Sidebar -->
@@ -38,7 +38,7 @@
                         
                         @can('berita_access')
                             <li class="nav-item">
-                                <a href="{{ route('pendaftaran.index') }}" class="nav-link" id="staff">
+                                <a href="{{ route('pendaftaran.index') }}" class="nav-link" id="pendaftaran">
                                     <i class="nav-icon fas fa-scroll"></i>
                                     <p>Informasi Pendaftaran</p>
                                 </a>
@@ -56,17 +56,13 @@
 
                         @can('alumni_access')
                             <li class="nav-item">
-                                <a href="{{ route('petinggi.index') }}" class="nav-link" id="Alumni">
+                                <a href="{{ route('petinggi.index') }}" class="nav-link" id="petinggi">
                                     <i class="nav-icon fas fa-user"></i>
                                     <p> Petinggi </p>
                                 </a>
                             </li>
                         @endcan
 
-
-
-
-                       
                         {{-- @endif --}}
                     </ul>
                 </nav>

@@ -20,7 +20,7 @@
 
 
 <body class="hold-transition login-page">
-    <div class="login-box">
+    <div class="login-box" style="background-color: #4E6766; ">
         <div class="login-logo p-3">
             <a href="{{ '/' }}">
                 <img src="{{ asset('assets/images/logolanal.png') }}" class="img img-responsive"
@@ -29,20 +29,21 @@
         </div>
         <div class="form-login">
             <div class="login-card-body">
-                <div class="text-center">
-                    <p class="login-box-msg mb-3">Login into your Account</p>
-                </div>
+            <div class="text-center">
+                <p class="login-box-msg mb-3" style="font-size: 20px;">Masuk ke akun admin</p>
+            </div>
+
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="input-group mb-4">
-                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                            name="email" value="{{ old('email') }}" placeholder="Email Address" required
-                            autocomplete="email" autofocus>
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" style="background-color: #4E6766; border: none;">
+                                <span class="fas fa-envelope" style="color: white;"></span>
                             </div>
                         </div>
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
+                            name="email" value="{{ old('email') }}" placeholder="Masukkan Email" required
+                            autocomplete="email" autofocus style="border-left: none;">
                         @error('email')
                             <span class="text-danger">
                                 <p>{{ $message }}</p>
@@ -50,24 +51,23 @@
                         @enderror
                     </div>
                     <div class="input-group">
-                        <input id="password" type="password"
-                            class="form-control @error('password') is-invalid @enderror" name="password"
-                            placeholder="Password" required autocomplete="current-password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-key"></span>
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" style="background-color: #4E6766; border: none;">
+                                <span class="fas fa-key" style="color: white;"></span>
                             </div>
                         </div>
-                        @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-
-                    </div>
+                        <input id="password" type="password"
+                                class="form-control @error('password') is-invalid @enderror" name="password"
+                                placeholder="Kata sandi" required autocomplete="current-password" style="border-left: none;">
+                            @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
                     <div class="row justify-content-center mt-5">
                         <!-- /.col -->
-                        <button type="submit" class="btn btn-login"> Log In</button>
+                        <button type="submit" class="btn btn-block text-white" style="background-color: #4E6766;">Masuk</button>
                         <!-- /.col -->
                     </div>
                 </form>

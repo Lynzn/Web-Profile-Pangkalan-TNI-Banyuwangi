@@ -20,14 +20,14 @@
   
                           <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0 text-white">
                               <h5 class="footer-head">Telepon</h5>
-                              <p>+62 333 510733</p>
+                              <p>(0333) 510733</p>
                           </div>
                           <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                               <h5 class="footer-head text-white">Link Terkait</h5>
                               <ul class="list-unstyled ps-3 mb-0 mt-8">
                               <li style="list-style-type: disc;"><a href="https://tni.mil.id/" target="_blank" class="rounded text-white">MABES TNI</a></li>
                               <li style="list-style-type: disc;"><a href="https://www.tnial.mil.id/" target="_blank" class="rounded text-white">MABES TNI AL</a></li>
-                              <li style="list-style-type: disc;"><a href="https://sisinforb.tnial.mil.id/" target="_blank" class="rounded text-white">sisinfoRB TNI AL</a></li>
+                              <li style="list-style-type: disc;"><a href="https://sisinforb.tnial.mil.id/" target="_blank" class="rounded text-white">SisinfoRB TNI AL</a></li>
                               </ul>
                             </div>
                             <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">

@@ -1,8 +1,6 @@
 @extends('layouts.index')
 @section('heading', 'Dokumentasi Kegiatan')
 @section('page')
-    <a href="{{ route('alumni') }}" class="text-capitalize">Dokumentasi Kegiatan</a>
-    <span class="mx-3 fas fa-angle-right"></span>
     <span class="current">{{ 'Galeri' }} </span>
 @endsection
 @section('content')

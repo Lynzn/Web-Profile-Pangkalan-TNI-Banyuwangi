@@ -41,9 +41,9 @@
                                                 <form action="{{ route('berita.destroy', $data->id) }}" method="post">
                                                     @csrf
                                                     @method('delete')
-                                                        
                                                     <button class="btn btn-danger btn-sm"><i
                                                             class="mr-2 nav-icon fas fa-trash-alt"></i>Hapus</button>
+                                                            
                                                 </form>
                                             </td>
                                         </tr>

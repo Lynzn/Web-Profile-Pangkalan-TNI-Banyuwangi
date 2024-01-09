@@ -86,10 +86,8 @@ class PetinggiController extends Controller
      */
     public function edit($id)
     {
-        // Menghapus parameter yang tidak digunakan
         $petinggi = Petinggi_Model::findorfail($id);
         return view('admin.petinggi.edit', compact('petinggi'));
-        // dd($petinggi);
     }
     
     /**

@@ -40,13 +40,12 @@
                                             
                                             </td>
                                             <td>
-                                                <form action="{{ route('alumni.destroy', $data->id_alumni) }}"
-                                                    method="post">
+                                                <form action="{{ route('alumni.destroy', $data->id_alumni) }}" method="post">
                                                     @csrf
                                                     @method('delete')
-                                                    <a href="{{ route('alumni.edit', Crypt::encrypt($data->id_alumni)) }}"
-                                                        class="btn btn-success btn-sm"><i class="nav-icon fas fa-edit"></i>
-                                                        &nbsp; Edit</a>
+                                                    <a href="{{ route('alumni.edit', ($data->id_alumni)) }}"
+                                                        class="btn btn-success btn-sm"><i class="mr-2 nav-icon fas fa-edit"></i>
+                                                         Edit</a>
 
                                                     <button class="btn btn-danger btn-sm"><i
                                                             class="mr-2 nav-icon fas fa-trash-alt"></i>Hapus</button>

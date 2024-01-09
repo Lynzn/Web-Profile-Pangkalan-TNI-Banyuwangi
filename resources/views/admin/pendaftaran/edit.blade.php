@@ -2,7 +2,7 @@
 @section('heading', 'Edit pendaftaran')
 
 @section('page')
-    <li class="breadcrumb-item active">pendaftaran AMIK Medicom</li>
+    <li class="breadcrumb-item active">pendaftaran</li>
 @endsection
 @section('content')
     <!-- Main content -->

@@ -40,6 +40,7 @@
                                         @enderror
                                     </div>
                                 </div>
+                                
                                 <div class="form-group w-50">
                                     <label for="gambar">Pilih File</label>
                                     <div class="input-group">

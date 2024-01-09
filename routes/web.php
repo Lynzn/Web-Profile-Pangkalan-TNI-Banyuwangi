@@ -60,6 +60,7 @@ Route::get('blog/{slug}', [BlogController::class, 'show'])->name('blog.detail');
 
 
 Route::get('sejarah', [PageController::class, 'sejarah'])->name('sejarah');
+Route::get('struktur_organisasi', [PageController::class, 'struktur_organisasi'])->name('struktur_organisasi');
 Route::get('sambutan_direktur', [PageController::class, 'sambutan_direktur'])->name('sambutan_direktur');
 Route::get('visi_misi', [PageController::class, 'visi_misi'])->name('visi_misi');
 Route::get('sasaran_kebijakan', [PageController::class, 'sasaran_kebijakan'])->name('sasaran_kebijakan');
@@ -96,7 +97,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::delete('admin/banner/{id_banner}', [BannerController::class, 'destroy'])->name('banner.destroy');
 
     // Pengumuman
-    Route::get('admin/pengumuman', [PengumumanController::class, 'index'])->name('pengumuman');
+    Route::get('admin/pengumuman', [PengumumanController::class, 'index'])->name('admin.pengumuman.index');
     Route::get('admin/pengumuman/create', [PengumumanController::class, 'create'])->name('admin.pengumuman.create');
     Route::post('admin/pengumuman/store', [PengumumanController::class, 'store'])->name('admin.pengumuman.store');
     Route::delete('admin/pengumuman/destroy/{id}', [PengumumanController::class, 'destroy'])->name('admin.pengumuman.destroy');

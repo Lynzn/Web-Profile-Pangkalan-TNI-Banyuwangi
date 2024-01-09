@@ -21966,7 +21966,7 @@ html.maximized-card {
 }
 
 .login-box{
-  box-shadow: 5px 10px 5px rgba(255, 255, 255, 0.5);
+  box-shadow: 5px 10px 5px rgba(0, 75, 60, 0.5);
   background: #002347;
   border-radius: 10px;
   overflow: hidden;

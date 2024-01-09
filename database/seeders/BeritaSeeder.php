@@ -19,7 +19,6 @@ class BeritaSeeder extends Seeder
             'judul_berita'   => 'Judul berita',
             'slug_berita'    => 'Judul_berita',
             'isi'           => '<p>Isi berita</p>',
-            'user_id'       => 1,
             'publish'         => '2021-06-03',
             'gambar'        => 'assets/images/berita/',
             'created_at'            => '2021-06-03 15:46:18',

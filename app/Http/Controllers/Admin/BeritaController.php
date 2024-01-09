@@ -44,6 +44,7 @@ class BeritaController extends Controller
             'judul_berita' => 'required',
             'isi'          => 'required',
             'gambar'          => 'required|file|mimes:jpeg,png,jpg|max:5000',
+            'link_ig'          => 'nullable',
         ]);
 
         $slug_berita = Str::slug($request->judul_berita, '-');
@@ -85,11 +86,10 @@ class BeritaController extends Controller
      * @param  \App\Models\Berita  $berita
      * @return \Illuminate\Http\Response
      */
-    public function edit(Berita_Model $berita)
+    public function edit($id)
     {
-        //
+     
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -99,13 +99,12 @@ class BeritaController extends Controller
      */
     public function update(Request $request, Berita_Model $berita)
     {
-        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Berita_Model  $berita
+     * @param  \App\Models\Banner  $banner
      * @return \Illuminate\Http\Response
      */
     public function destroy(Berita_Model $id)

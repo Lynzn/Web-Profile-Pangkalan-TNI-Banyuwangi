@@ -1,8 +1,6 @@
 @extends('layouts.index')
 @section('heading', 'Visi, Misi Motto LANAL BANYUWANGI')
 @section('page')
-    <span>Profile</span>
-    <span class="mx-3 fas fa-angle-right"></span>
     <span class="current">Visi Misi</span>
 @endsection
 @section('content')
@@ -17,20 +15,13 @@
                             <h4 class="text-center">VISI</h4>
                             <p>Visi Pangkalan TNI AL Banyuwangi adalah :
                                 <br>
-                                “MENJADI CENTER OF EXCELLENCE (COE) PRAJURIT KESEHATAN MATRA LAUT“</p>
+                                “Mewujudkan Lanal Banyuwangi sebagai Lanal yang bermoral berdedikasi berintegritas“</p>
                         </div>
 
                         <div class="section-title pb-4">
                             <h4 class="text-center">MISI</h4>
-                            <p>Misi Politeknik Negeri Banyuwangi adalah</p>
-
-                            <ol>
-                                <li> Menanamkan dan membentuk prajurit kesahatan TNI AL yang bermental juang tinggi dan berjiwa Sapta Marga</li>
-                                <li> Membekali dan menumbuhkan prajurit kesehatan TNI AL kemampuan teknis, taktis dan profesional dalam dukungan kesehatan lapangan serta berkarakter kenyal, ulet dan dinamis.</li>
-                                <li> Menumbuhkan dan mengembangkan sikap profesionalisme prajurit kesehatan TNI AL sesuai bidang tugas dan profesinya.</li>
-                                <li> Menanamkan dan menumbuhkan prajurit kesehatan TNI AL sikap bertanggung jawab dan berintegritas tinggi dalam tugas.</li>
-                                <li> Membentuk prajurit kesehatan TNI AL berkesamaptaan jasmani yang prima dan operable dalam tugas operasi dan latihan.</li>
-                            </ol>
+                            <p>Bertaqwa kepada tuhan Yang Maha Esa, jaga stamina yang prima, laksanakan tugas dengan iklas, loyal
+                                dan bertanggung jawab, kreatif, inovatif dan informatif, bekerja sama dan saling percaya </p>
                         </div>
 
                         <div class="section-title pb-4">
